@@ -7,10 +7,10 @@
 #include <NTPClient.h>
 
 
-#define WIFI_SSID "Iphone de Kauan Fiolo"                  
-#define WIFI_PASSWORD "bialinda123"             
-#define FIREBASE_HOST "https://farm-automatica-9c0a4-default-rtdb.firebaseio.com/"
-#define FIREBASE_AUTH "oo4fQpEMV4i4LxoewgmHWwVgBe2bufQFcjrjG6zx"
+#define WIFI_SSID "NOME DA REDE"                  
+#define WIFI_PASSWORD "SENHA DA REDE"             
+#define FIREBASE_HOST "FIREBASE URL"
+#define FIREBASE_AUTH "FIREBASE API KEY"
 
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
