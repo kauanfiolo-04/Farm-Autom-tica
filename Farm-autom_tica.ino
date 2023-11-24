@@ -68,11 +68,11 @@ void loop() {
 
   if(regar){
     digitalWrite(LED_BUILTIN, HIGH);
-    // digitalWrite(5, HIGH);
-    delay(5000);
+    digitalWrite(5, HIGH);
+    delay(3000);
     Firebase.setBool("/Regar", false);
     digitalWrite(LED_BUILTIN, LOW);
-    // digitalWrite(5, LOW);
+    digitalWrite(5, LOW);
   }else{
     digitalWrite(LED_BUILTIN, LOW);
     digitalWrite(5, LOW);
