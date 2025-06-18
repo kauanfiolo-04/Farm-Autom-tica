@@ -16,8 +16,8 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  pinMode(5, OUTPUT);
+  pinMode(2, OUTPUT);        //LED
+  pinMode(5, OUTPUT);        //Relé
   
   Serial.begin(115200);      //inicia comunicação serial
   Serial.println();          //imprime pulo de linha
@@ -67,14 +67,14 @@ void loop() {
   }
 
   if(regar){
-    digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(2, HIGH);
     digitalWrite(5, HIGH);
     delay(3000);
     Firebase.setBool("/Regar", false);
-    digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(2, LOW);
     digitalWrite(5, LOW);
   }else{
-    digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(2, LOW);
     digitalWrite(5, LOW);
   }
 
